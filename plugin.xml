@@ -107,16 +107,17 @@ SOFTWARE.
 
     <config-file target="AndroidManifest.xml" parent="/manifest/application/activity">
       <intent-filter>
-        <!-- See https://developer.android.com/guide/topics/manifest/data-element.html -->
-        <data android:mimeType="audio/*" />
-        <data android:mimeType="application/*" />
-        <data android:mimeType="video/*" />
-        <data android:mimeType="image/*" />
-        <data android:mimeType="text/*" />
-        <action android:name="android.intent.action.SEND" />
-        <action android:name="android.intent.action.SEND_MULTIPLE" />
-        <category android:name="android.intent.category.DEFAULT" />
-        <category android:name="android.intent.category.BROWSABLE" />
+          <data android:mimeType="application/pdf"/>
+          <action android:name="android.intent.action.SEND"/>
+          <category android:name="android.intent.category.DEFAULT"/>
+          <category android:name="android.intent.category.BROWSABLE" />
+      </intent-filter>
+      <intent-filter>
+          <data android:mimeType="image/*" />
+          <action android:name="android.intent.action.SEND" />
+          <action android:name="android.intent.action.SEND_MULTIPLE" />
+          <category android:name="android.intent.category.DEFAULT" />
+          <category android:name="android.intent.category.BROWSABLE" />
       </intent-filter>
     </config-file>
 
